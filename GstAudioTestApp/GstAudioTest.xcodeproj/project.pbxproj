@@ -20,7 +20,7 @@
 		6399021E16E775DC00D63287 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6399021C16E775DC00D63287 /* MainStoryboard_iPad.storyboard */; };
 		6399022116E775DC00D63287 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399022016E775DC00D63287 /* ViewController.m */; };
 		6399024016E7762B00D63287 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6399023F16E7762B00D63287 /* Config.xcconfig */; };
-		6399024216E7767700D63287 /* gst_backend.c in Sources */ = {isa = PBXBuildFile; fileRef = 6399024116E7767700D63287 /* gst_backend.c */; };
+		6399024216E7767700D63287 /* gst_backend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399024116E7767700D63287 /* gst_backend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 		6399022016E775DC00D63287 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6399022816E775DD00D63287 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		6399023F16E7762B00D63287 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		6399024116E7767700D63287 /* gst_backend.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gst_backend.c; sourceTree = "<group>"; };
+		6399024116E7767700D63287 /* gst_backend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gst_backend.m; sourceTree = "<group>"; };
 		6399024316E776A000D63287 /* gst_backend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gst_backend.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +100,7 @@
 				6399021F16E775DC00D63287 /* ViewController.h */,
 				6399022016E775DC00D63287 /* ViewController.m */,
 				6399020816E775DA00D63287 /* Supporting Files */,
-				6399024116E7767700D63287 /* gst_backend.c */,
+				6399024116E7767700D63287 /* gst_backend.m */,
 				6399024316E776A000D63287 /* gst_backend.h */,
 			);
 			path = GstAudioTest;
@@ -191,7 +191,7 @@
 				6399020E16E775DB00D63287 /* main.m in Sources */,
 				6399021216E775DB00D63287 /* AppDelegate.m in Sources */,
 				6399022116E775DC00D63287 /* ViewController.m in Sources */,
-				6399024216E7767700D63287 /* gst_backend.c in Sources */,
+				6399024216E7767700D63287 /* gst_backend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +326,7 @@
 				6399023B16E775DD00D63287 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

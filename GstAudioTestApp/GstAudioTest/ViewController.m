@@ -65,12 +65,21 @@ static GstApp *app = NULL;
         NSString *caps_str = [self getCaps];
         
         app = gst_backend_audio_playback_start ();
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(GstError:) name:@"GstErrorEvent" object:nil];
         gst_backend_audio_playback_set_format (app, caps_str.UTF8String);
         gst_backend_audio_playback_play (app);
     } else {
         gst_backend_audio_playback_stop (app);
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"GstErrorEvent" object:nil];
         app = NULL;
     }
+}
+
+- (void)GstError:(NSNotification *)notification {
+    NSDictionary *userInfo = [notification userInfo];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"GStreamer Error" message:[userInfo valueForKey:@"Message"] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [alert show];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *) pickerView {

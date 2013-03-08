@@ -8,6 +8,7 @@ typedef struct {
     GstElement *pipeline;
     GstElement *capsfilter;
     GstState state;
+    gboolean running;
 } GstApp;
 
 void gst_backend_initialize(void);
