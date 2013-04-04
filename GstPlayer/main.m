@@ -49,8 +49,6 @@
 
 int main(int argc, char *argv[])
 {
-    @autoreleasepool {
-        gst_backend_init();
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
+    gst_backend_init();
+    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
 }

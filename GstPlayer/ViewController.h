@@ -46,8 +46,11 @@
 
 @interface ViewController : UIViewController <UICollectionViewDataSource> {
     IBOutlet UICollectionView *collectionView;
+    NSArray *mediaEntries;
 }
 
 @property (retain,nonatomic) UICollectionView *collectionView;
+
+- (void)refreshMediaItems;
 
 @end

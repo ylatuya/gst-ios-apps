@@ -48,12 +48,6 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface ViewController () {
-    NSArray *mediaEntries;
-}
-
-@end
-
 @implementation ViewController
 
 @synthesize collectionView;

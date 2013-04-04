@@ -42,13 +42,14 @@
  * Boston, MA 02111-1307, USA.
  */
 #import <UIKit/UIKit.h>
+#include <gst/gst.h>
 
 @interface PlaybackViewController : UIViewController {
     IBOutlet UIBarButtonItem *backButton;
+    GstElement *pipeline;
 }
 
 @property (retain,nonatomic) UIBarButtonItem *backButton;
-
 
 -(IBAction)back:(id)sender;
 

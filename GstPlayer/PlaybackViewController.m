@@ -43,10 +43,7 @@
  */
 
 #import "PlaybackViewController.h"
-
-@interface PlaybackViewController ()
-
-@end
+#include <gst/gst.h>
 
 @implementation PlaybackViewController
 
@@ -65,6 +62,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self->pipeline = gst_element_factory_make("playbin2", NULL);
+}
+
+- (void)dealloc
+{
+    if (self->pipeline) {
+        gst_element_set_state(self->pipeline, GST_STATE_NULL);
+        gst_object_unref(self->pipeline);
+    }
+    //[super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
