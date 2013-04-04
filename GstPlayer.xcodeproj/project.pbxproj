@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BB17FC5C170CA6C200D1C787 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC5B170CA6C200D1C787 /* UIKit.framework */; };
-		BB17FC5E170CA6C200D1C787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC5D170CA6C200D1C787 /* Foundation.framework */; };
 		BB17FC60170CA6C200D1C787 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC5F170CA6C200D1C787 /* CoreGraphics.framework */; };
 		BB17FC62170CA6C200D1C787 /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC61170CA6C200D1C787 /* GStreamer.framework */; };
 		BB17FC64170CA6C200D1C787 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC63170CA6C200D1C787 /* CoreAudio.framework */; };
@@ -31,6 +30,15 @@
 		BB17FCA4170CABF500D1C787 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FCA3170CABF500D1C787 /* MediaPlayer.framework */; };
 		BB17FCA7170CB73A00D1C787 /* MovieEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB17FCA6170CB73A00D1C787 /* MovieEntryCell.m */; };
 		BBD8E976170DAA9200E98C18 /* PlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD8E975170DAA9200E98C18 /* PlaybackViewController.m */; };
+		BBD8E97C170DCED900E98C18 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E97B170DCED900E98C18 /* libresolv.dylib */; };
+		BBD8E97E170DD4FC00E98C18 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E97D170DD4FC00E98C18 /* libstdc++.dylib */; };
+		BBD8E980170DD6B000E98C18 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E97F170DD6B000E98C18 /* OpenGLES.framework */; };
+		BBD8E982170DD6B400E98C18 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E981170DD6B400E98C18 /* AVFoundation.framework */; };
+		BBD8E98A170DDB7C00E98C18 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E989170DDB7C00E98C18 /* AudioToolbox.framework */; };
+		BBD8E98C170DDBFF00E98C18 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E98B170DDBFF00E98C18 /* CoreVideo.framework */; };
+		BBD8E98E170DDC0400E98C18 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E98D170DDC0400E98C18 /* CoreMedia.framework */; };
+		BBD8E990170DDC2000E98C18 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E98F170DDC2000E98C18 /* CoreFoundation.framework */; };
+		BBD8E991170DE0AB00E98C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC5D170CA6C200D1C787 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +86,15 @@
 		BB17FCA6170CB73A00D1C787 /* MovieEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieEntryCell.m; sourceTree = "<group>"; };
 		BBD8E974170DAA9200E98C18 /* PlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackViewController.h; sourceTree = "<group>"; };
 		BBD8E975170DAA9200E98C18 /* PlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackViewController.m; sourceTree = "<group>"; };
+		BBD8E97B170DCED900E98C18 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		BBD8E97D170DD4FC00E98C18 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		BBD8E97F170DD6B000E98C18 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		BBD8E981170DD6B400E98C18 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BBD8E983170DD6C400E98C18 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		BBD8E989170DDB7C00E98C18 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BBD8E98B170DDBFF00E98C18 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		BBD8E98D170DDC0400E98C18 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		BBD8E98F170DDC2000E98C18 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +102,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD8E991170DE0AB00E98C18 /* Foundation.framework in Frameworks */,
+				BBD8E990170DDC2000E98C18 /* CoreFoundation.framework in Frameworks */,
+				BBD8E98E170DDC0400E98C18 /* CoreMedia.framework in Frameworks */,
+				BBD8E98C170DDBFF00E98C18 /* CoreVideo.framework in Frameworks */,
+				BBD8E98A170DDB7C00E98C18 /* AudioToolbox.framework in Frameworks */,
+				BBD8E982170DD6B400E98C18 /* AVFoundation.framework in Frameworks */,
+				BBD8E980170DD6B000E98C18 /* OpenGLES.framework in Frameworks */,
+				BBD8E97E170DD4FC00E98C18 /* libstdc++.dylib in Frameworks */,
+				BBD8E97C170DCED900E98C18 /* libresolv.dylib in Frameworks */,
 				BB17FCA4170CABF500D1C787 /* MediaPlayer.framework in Frameworks */,
 				BB17FC5C170CA6C200D1C787 /* UIKit.framework in Frameworks */,
-				BB17FC5E170CA6C200D1C787 /* Foundation.framework in Frameworks */,
 				BB17FC60170CA6C200D1C787 /* CoreGraphics.framework in Frameworks */,
 				BB17FC62170CA6C200D1C787 /* GStreamer.framework in Frameworks */,
 				BB17FC64170CA6C200D1C787 /* CoreAudio.framework in Frameworks */,
@@ -110,6 +135,15 @@
 		BB17FC4F170CA6C100D1C787 = {
 			isa = PBXGroup;
 			children = (
+				BBD8E98F170DDC2000E98C18 /* CoreFoundation.framework */,
+				BBD8E98D170DDC0400E98C18 /* CoreMedia.framework */,
+				BBD8E98B170DDBFF00E98C18 /* CoreVideo.framework */,
+				BBD8E989170DDB7C00E98C18 /* AudioToolbox.framework */,
+				BBD8E983170DD6C400E98C18 /* CoreAudio.framework */,
+				BBD8E981170DD6B400E98C18 /* AVFoundation.framework */,
+				BBD8E97F170DD6B000E98C18 /* OpenGLES.framework */,
+				BBD8E97D170DD4FC00E98C18 /* libstdc++.dylib */,
+				BBD8E97B170DCED900E98C18 /* libresolv.dylib */,
 				BB17FC65170CA6C200D1C787 /* GstPlayer */,
 				BB17FC92170CA6C200D1C787 /* GstPlayerTests */,
 				BB17FC5A170CA6C200D1C787 /* Frameworks */,
