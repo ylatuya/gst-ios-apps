@@ -52,6 +52,46 @@
 @synthesize playButton;
 @synthesize screenView;
 
+-(void) _poll_gst_bus
+{
+    GstBus *bus;
+    GstMessage *msg;
+        
+    /* Wait until error or EOS */
+    bus = gst_element_get_bus (self->pipeline);
+    msg = gst_bus_timed_pop_filtered(bus, GST_CLOCK_TIME_NONE,
+                                         (GstMessageType) (GST_MESSAGE_ERROR | GST_MESSAGE_EOS));
+    gst_object_unref(bus);
+    
+    switch (GST_MESSAGE_TYPE(msg)) {
+        case GST_MESSAGE_EOS:
+            [self stop];
+            NSLog(@"EOS");
+            break;
+        case GST_MESSAGE_ERROR: {
+            GError *gerr = NULL;
+            gchar *debug;
+            
+            gst_message_parse_error(msg, &gerr, &debug);
+            
+            [self stop];
+            NSLog(@"Error %s - %s", gerr->message, debug, nil);
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Playback error"
+                                                            message:[NSString stringWithUTF8String:gerr->message]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            //[alert release];
+            
+        }
+            break;
+        default:
+            break;
+    }
+}
+
 -(void)initialize
 {
     if (self->pipeline == NULL) {
@@ -59,6 +99,13 @@
         self->videosink = gst_element_factory_make("eglglessink", "videosink");
 
         g_object_set(self->pipeline, "video-sink", self->videosink, NULL);
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            while (1) {
+                GST_ERROR ("Starting loop!");
+                [self _poll_gst_bus];
+            }
+        });
     }
 }
 
@@ -107,12 +154,28 @@
     gst_element_get_state(self->pipeline, &current, &pending, 0);
     if (current == GST_STATE_PLAYING || pending == GST_STATE_PLAYING) {
         /* consider playing */
-        gst_element_set_state(self->pipeline, GST_STATE_PAUSED);
-        playButton.title = @"Play";
+        [self pause];
     } else {
-        gst_element_set_state(self->pipeline, GST_STATE_PLAYING);
-        playButton.title = @"Pause";
+        [self play];
     }
+}
+
+-(void)pause
+{
+    gst_element_set_state(self->pipeline, GST_STATE_PAUSED);
+    playButton.title = @"Play";
+}
+
+-(void)stop
+{
+    gst_element_set_state(self->pipeline, GST_STATE_READY);
+    playButton.title = @"Play";
+}
+
+-(void)play
+{
+    gst_element_set_state(self->pipeline, GST_STATE_PLAYING);
+    playButton.title = @"Pause";
 }
 
 -(void)setURI:(NSString*)uri {

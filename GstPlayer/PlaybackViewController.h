@@ -61,6 +61,9 @@
 -(IBAction)togglePlay:(id)sender;
 
 -(void)initialize;
+-(void)pause;
+-(void)stop;
+-(void)play;
 
 -(void)setURI:(NSString*)uri;
 
