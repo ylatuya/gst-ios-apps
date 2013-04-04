@@ -55,7 +55,10 @@
 @property (retain,nonatomic) UIBarButtonItem *playButton;
 
 -(IBAction)back:(id)sender;
-
 -(IBAction)togglePlay:(id)sender;
+
+-(void)initialize;
+
+-(void)setURI:(NSString*)uri;
 
 @end

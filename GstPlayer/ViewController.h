@@ -52,5 +52,6 @@
 @property (retain,nonatomic) UICollectionView *collectionView;
 
 - (void)refreshMediaItems;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
 @end

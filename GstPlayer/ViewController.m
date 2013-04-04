@@ -44,6 +44,7 @@
 
 #import "ViewController.h"
 #import "MovieEntryCell.h"
+#import "PlaybackViewController.h"
 
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
@@ -91,10 +92,21 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MovieEntryCell* newCell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"cell"
                                                                            forIndexPath:indexPath];
-    
     newCell.label.text = [self->mediaEntries objectAtIndex:indexPath.item];
 
     return newCell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"doPlay"]) {
+        MovieEntryCell *cell = sender;
+        PlaybackViewController *vc = [segue destinationViewController];
+        NSString *uri = [NSString stringWithFormat:@"file://%@", cell.label.text, nil];
+        
+        [vc initialize];
+        [vc setURI:uri];
+    }
 }
 
 @end

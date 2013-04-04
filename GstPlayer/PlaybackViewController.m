@@ -50,11 +50,19 @@
 @synthesize backButton;
 @synthesize playButton;
 
+-(void)initialize
+{
+    if (self->pipeline == NULL) {
+        self->pipeline = gst_element_factory_make("playbin2", NULL);
+    }
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [self initialize];
     }
     return self;
 }
@@ -63,8 +71,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    self->pipeline = gst_element_factory_make("playbin2", NULL);
+    [self initialize];
 }
 
 - (void)dealloc
@@ -100,6 +107,10 @@
         gst_element_set_state(self->pipeline, GST_STATE_PLAYING);
         playButton.title = @"Pause";
     }
+}
+
+-(void)setURI:(NSString*)uri {
+    g_object_set(self->pipeline, "uri", [uri UTF8String], NULL);
 }
 
 @end
