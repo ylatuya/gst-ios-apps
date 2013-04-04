@@ -46,11 +46,16 @@
 
 @interface PlaybackViewController : UIViewController {
     IBOutlet UIBarButtonItem *backButton;
+    IBOutlet UIBarButtonItem *playButton;
+    
     GstElement *pipeline;
 }
 
 @property (retain,nonatomic) UIBarButtonItem *backButton;
+@property (retain,nonatomic) UIBarButtonItem *playButton;
 
 -(IBAction)back:(id)sender;
+
+-(IBAction)togglePlay:(id)sender;
 
 @end

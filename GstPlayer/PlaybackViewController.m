@@ -48,6 +48,7 @@
 @implementation PlaybackViewController
 
 @synthesize backButton;
+@synthesize playButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -83,6 +84,22 @@
 
 -(IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)togglePlay:(id)sender
+{
+    GstState current = GST_STATE_PLAYING;
+    GstState pending = GST_STATE_PLAYING;
+    
+    gst_element_get_state(self->pipeline, &current, &pending, 0);
+    if (current == GST_STATE_PLAYING || pending == GST_STATE_PLAYING) {
+        /* consider playing */
+        gst_element_set_state(self->pipeline, GST_STATE_PAUSED);
+        playButton.title = @"Play";
+    } else {
+        gst_element_set_state(self->pipeline, GST_STATE_PLAYING);
+        playButton.title = @"Pause";
+    }
 }
 
 @end

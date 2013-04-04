@@ -76,7 +76,11 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </slider>
                                     </barButtonItem>
-                                    <barButtonItem title="Play" style="plain" id="iyk-VC-2LE"/>
+                                    <barButtonItem title="Play" style="plain" id="iyk-VC-2LE">
+                                        <connections>
+                                            <action selector="togglePlay:" destination="bjh-aH-ldv" id="LVz-tW-EGd"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iF4-n3-EBL">
@@ -96,6 +100,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="Mzj-p2-eHU" id="lVc-VL-Vrb"/>
+                        <outlet property="playButton" destination="iyk-VC-2LE" id="Mha-aY-ay8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKE-Gy-njF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -117,7 +122,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PlaybackViewController.h"/>
             <relationships>
                 <relationship kind="action" name="back:"/>
+                <relationship kind="action" name="togglePlay:"/>
                 <relationship kind="outlet" name="backButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="playButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">
