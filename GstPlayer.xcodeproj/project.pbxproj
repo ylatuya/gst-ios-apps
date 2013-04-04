@@ -28,6 +28,8 @@
 		BB17FC8F170CA6C200D1C787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC5D170CA6C200D1C787 /* Foundation.framework */; };
 		BB17FC97170CA6C200D1C787 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB17FC95170CA6C200D1C787 /* InfoPlist.strings */; };
 		BB17FC9A170CA6C200D1C787 /* GstPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB17FC99170CA6C200D1C787 /* GstPlayerTests.m */; };
+		BB17FCA4170CABF500D1C787 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FCA3170CABF500D1C787 /* MediaPlayer.framework */; };
+		BB17FCA7170CB73A00D1C787 /* MovieEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB17FCA6170CB73A00D1C787 /* MovieEntryCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,9 @@
 		BB17FC96170CA6C200D1C787 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB17FC98170CA6C200D1C787 /* GstPlayerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GstPlayerTests.h; sourceTree = "<group>"; };
 		BB17FC99170CA6C200D1C787 /* GstPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GstPlayerTests.m; sourceTree = "<group>"; };
+		BB17FCA3170CABF500D1C787 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BB17FCA5170CB73A00D1C787 /* MovieEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieEntryCell.h; sourceTree = "<group>"; };
+		BB17FCA6170CB73A00D1C787 /* MovieEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieEntryCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB17FCA4170CABF500D1C787 /* MediaPlayer.framework in Frameworks */,
 				BB17FC5C170CA6C200D1C787 /* UIKit.framework in Frameworks */,
 				BB17FC5E170CA6C200D1C787 /* Foundation.framework in Frameworks */,
 				BB17FC60170CA6C200D1C787 /* CoreGraphics.framework in Frameworks */,
@@ -120,6 +126,7 @@
 		BB17FC5A170CA6C200D1C787 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB17FCA3170CABF500D1C787 /* MediaPlayer.framework */,
 				BB17FC5B170CA6C200D1C787 /* UIKit.framework */,
 				BB17FC5D170CA6C200D1C787 /* Foundation.framework */,
 				BB17FC5F170CA6C200D1C787 /* CoreGraphics.framework */,
@@ -140,6 +147,8 @@
 				BB17FC7D170CA6C200D1C787 /* ViewController.h */,
 				BB17FC7E170CA6C200D1C787 /* ViewController.m */,
 				BB17FC66170CA6C200D1C787 /* Supporting Files */,
+				BB17FCA5170CB73A00D1C787 /* MovieEntryCell.h */,
+				BB17FCA6170CB73A00D1C787 /* MovieEntryCell.m */,
 			);
 			path = GstPlayer;
 			sourceTree = "<group>";
@@ -297,6 +306,7 @@
 				BB17FC7F170CA6C200D1C787 /* ViewController.m in Sources */,
 				BB17FC81170CA6C200D1C787 /* gst_ios_backend.c in Sources */,
 				BB17FC84170CA6C200D1C787 /* gst_ios_plugins.c in Sources */,
+				BB17FCA7170CB73A00D1C787 /* MovieEntryCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +425,7 @@
 		BB17FC9E170CA6C200D1C787 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"~/Library/Developer/GStreamer/iPhone.sdk\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -431,6 +442,7 @@
 		BB17FC9F170CA6C200D1C787 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"~/Library/Developer/GStreamer/iPhone.sdk\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -497,6 +509,7 @@
 				BB17FC9F170CA6C200D1C787 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB17FCA0170CA6C200D1C787 /* Build configuration list for PBXNativeTarget "GstPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +518,7 @@
 				BB17FCA2170CA6C200D1C787 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

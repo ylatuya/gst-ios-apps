@@ -42,65 +42,28 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#import "ViewController.h"
 #import "MovieEntryCell.h"
 
-#import <MediaPlayer/MediaPlayer.h>
-#import <AVFoundation/AVFoundation.h>
+@implementation MovieEntryCell
 
-@interface ViewController () {
-    NSArray *mediaEntries;
-}
+@synthesize label;
 
-@end
-
-@implementation ViewController
-
-@synthesize collectionView;
-
-- (void)viewDidLoad
+- (id)initWithFrame:(CGRect)frame
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    [self refreshMediaItems];
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
 }
 
-- (void)didReceiveMemoryWarning
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Drawing code
 }
-
-- (void)refreshMediaItems {
-    NSArray *ftypes = [NSArray arrayWithObjects:@"mov", @"m4v", @"m4a", @"mp4", nil];
-    
-    NSMutableArray *entries = [[NSMutableArray alloc] init];
-    
-    for (NSString *t in ftypes) {
-        [entries addObjectsFromArray:[[NSBundle mainBundle] pathsForResourcesOfType:t inDirectory:@"."]];
-    }
-    self->mediaEntries = entries;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (section == 0) {
-        return [self->mediaEntries count];
-    }
-    return 0;
-}
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    MovieEntryCell* newCell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"cell"
-                                                                           forIndexPath:indexPath];
-    
-    newCell.label.text = [self->mediaEntries objectAtIndex:indexPath.item];
-
-    return newCell;
-}
+*/
 
 @end

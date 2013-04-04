@@ -44,6 +44,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UICollectionViewDataSource> {
+    IBOutlet UICollectionView *collectionView;
+}
+
+@property (retain,nonatomic) UICollectionView *collectionView;
 
 @end
