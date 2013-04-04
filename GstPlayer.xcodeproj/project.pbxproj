@@ -476,6 +476,7 @@
 				GCC_PREFIX_HEADER = "GstPlayer/GstPlayer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"~/Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework/Headers\"";
 				INFOPLIST_FILE = "GstPlayer/GstPlayer-Info.plist";
+				OTHER_LDFLAGS = "\"-Wl,-iphoneos_version_min,5.2\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -493,6 +494,7 @@
 				GCC_PREFIX_HEADER = "GstPlayer/GstPlayer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"~/Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework/Headers\"";
 				INFOPLIST_FILE = "GstPlayer/GstPlayer-Info.plist";
+				OTHER_LDFLAGS = "\"-Wl,-iphoneos_version_min,5.2\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
