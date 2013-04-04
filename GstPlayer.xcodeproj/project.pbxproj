@@ -30,6 +30,7 @@
 		BB17FC9A170CA6C200D1C787 /* GstPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB17FC99170CA6C200D1C787 /* GstPlayerTests.m */; };
 		BB17FCA4170CABF500D1C787 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FCA3170CABF500D1C787 /* MediaPlayer.framework */; };
 		BB17FCA7170CB73A00D1C787 /* MovieEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB17FCA6170CB73A00D1C787 /* MovieEntryCell.m */; };
+		BBD8E976170DAA9200E98C18 /* PlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD8E975170DAA9200E98C18 /* PlaybackViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		BB17FCA3170CABF500D1C787 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		BB17FCA5170CB73A00D1C787 /* MovieEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieEntryCell.h; sourceTree = "<group>"; };
 		BB17FCA6170CB73A00D1C787 /* MovieEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieEntryCell.m; sourceTree = "<group>"; };
+		BBD8E974170DAA9200E98C18 /* PlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackViewController.h; sourceTree = "<group>"; };
+		BBD8E975170DAA9200E98C18 /* PlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				BB17FC66170CA6C200D1C787 /* Supporting Files */,
 				BB17FCA5170CB73A00D1C787 /* MovieEntryCell.h */,
 				BB17FCA6170CB73A00D1C787 /* MovieEntryCell.m */,
+				BBD8E974170DAA9200E98C18 /* PlaybackViewController.h */,
+				BBD8E975170DAA9200E98C18 /* PlaybackViewController.m */,
 			);
 			path = GstPlayer;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				BB17FC81170CA6C200D1C787 /* gst_ios_backend.c in Sources */,
 				BB17FC84170CA6C200D1C787 /* gst_ios_plugins.c in Sources */,
 				BB17FCA7170CB73A00D1C787 /* MovieEntryCell.m in Sources */,
+				BBD8E976170DAA9200E98C18 /* PlaybackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
