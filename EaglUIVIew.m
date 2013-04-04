@@ -41,26 +41,26 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  */
-#import <UIKit/UIKit.h>
-#include <gst/gst.h>
 
-@interface PlaybackViewController : UIViewController {
-    IBOutlet UIBarButtonItem *backButton;
-    IBOutlet UIBarButtonItem *playButton;
-    IBOutlet UIView *screenView;
-    
-    GstElement *pipeline;
+#import "EaglUIVIew.h"
+
+#import <QuartzCore/QuartzCore.h>
+
+@implementation EaglUIView
+
+
++ (Class) layerClass
+{
+    return [CAEAGLLayer class];
 }
 
-@property (retain,nonatomic) UIBarButtonItem *backButton;
-@property (retain,nonatomic) UIBarButtonItem *playButton;
-@property (retain,nonatomic) UIView *screenView;
-
--(IBAction)back:(id)sender;
--(IBAction)togglePlay:(id)sender;
-
--(void)initialize;
-
--(void)setURI:(NSString*)uri;
+- (id) initWithFrame:(CGRect)frame
+{
+    if ((self = [super initWithFrame:frame]))
+    {
+    }
+    
+    return self;
+}
 
 @end

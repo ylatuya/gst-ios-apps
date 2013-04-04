@@ -39,6 +39,8 @@
 		BBD8E98E170DDC0400E98C18 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E98D170DDC0400E98C18 /* CoreMedia.framework */; };
 		BBD8E990170DDC2000E98C18 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E98F170DDC2000E98C18 /* CoreFoundation.framework */; };
 		BBD8E991170DE0AB00E98C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC5D170CA6C200D1C787 /* Foundation.framework */; };
+		BBD8E998170E0B0C00E98C18 /* EaglUIVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD8E997170E0B0C00E98C18 /* EaglUIVIew.m */; };
+		BBD8E99C170E0C3000E98C18 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E99B170E0C3000E98C18 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,9 @@
 		BBD8E98B170DDBFF00E98C18 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		BBD8E98D170DDC0400E98C18 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		BBD8E98F170DDC2000E98C18 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		BBD8E996170E0B0C00E98C18 /* EaglUIVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EaglUIVIew.h; path = ../EaglUIVIew.h; sourceTree = "<group>"; };
+		BBD8E997170E0B0C00E98C18 /* EaglUIVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EaglUIVIew.m; path = ../EaglUIVIew.m; sourceTree = "<group>"; };
+		BBD8E99B170E0C3000E98C18 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD8E99C170E0C3000E98C18 /* QuartzCore.framework in Frameworks */,
 				BBD8E991170DE0AB00E98C18 /* Foundation.framework in Frameworks */,
 				BBD8E990170DDC2000E98C18 /* CoreFoundation.framework in Frameworks */,
 				BBD8E98E170DDC0400E98C18 /* CoreMedia.framework in Frameworks */,
@@ -135,6 +141,7 @@
 		BB17FC4F170CA6C100D1C787 = {
 			isa = PBXGroup;
 			children = (
+				BBD8E99B170E0C3000E98C18 /* QuartzCore.framework */,
 				BBD8E98F170DDC2000E98C18 /* CoreFoundation.framework */,
 				BBD8E98D170DDC0400E98C18 /* CoreMedia.framework */,
 				BBD8E98B170DDBFF00E98C18 /* CoreVideo.framework */,
@@ -177,6 +184,8 @@
 		BB17FC65170CA6C200D1C787 /* GstPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				BBD8E996170E0B0C00E98C18 /* EaglUIVIew.h */,
+				BBD8E997170E0B0C00E98C18 /* EaglUIVIew.m */,
 				BB17FC6E170CA6C200D1C787 /* AppDelegate.h */,
 				BB17FC6F170CA6C200D1C787 /* AppDelegate.m */,
 				BB17FC77170CA6C200D1C787 /* MainStoryboard_iPhone.storyboard */,
@@ -347,6 +356,7 @@
 				BB17FC84170CA6C200D1C787 /* gst_ios_plugins.c in Sources */,
 				BB17FCA7170CB73A00D1C787 /* MovieEntryCell.m in Sources */,
 				BBD8E976170DAA9200E98C18 /* PlaybackViewController.m in Sources */,
+				BBD8E998170E0B0C00E98C18 /* EaglUIVIew.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -49,6 +49,7 @@
 
 @synthesize backButton;
 @synthesize playButton;
+@synthesize screenView;
 
 -(void)initialize
 {
