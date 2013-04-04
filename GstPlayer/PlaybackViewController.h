@@ -50,6 +50,7 @@
     IBOutlet UIView *screenView;
     
     GstElement *pipeline;
+    GstElement *videosink;
 }
 
 @property (retain,nonatomic) UIBarButtonItem *backButton;

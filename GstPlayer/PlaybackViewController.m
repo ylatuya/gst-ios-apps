@@ -44,6 +44,7 @@
 
 #import "PlaybackViewController.h"
 #include <gst/gst.h>
+#include <gst/interfaces/xoverlay.h>
 
 @implementation PlaybackViewController
 
@@ -55,6 +56,9 @@
 {
     if (self->pipeline == NULL) {
         self->pipeline = gst_element_factory_make("playbin2", NULL);
+        self->videosink = gst_element_factory_make("eglglessink", "videosink");
+
+        g_object_set(self->pipeline, "video-sink", self->videosink, NULL);
     }
 }
 
@@ -73,6 +77,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self initialize];
+    gst_x_overlay_set_window_handle(GST_X_OVERLAY(self->videosink), (guintptr) (id) self.screenView);
 }
 
 - (void)dealloc
