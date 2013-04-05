@@ -54,6 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-283" y="-298"/>
         </scene>
         <!--Playback View Controller-->
         <scene sceneID="2aA-Hn-kbt">
@@ -72,9 +73,28 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="gsf-FS-kp3">
                                         <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="4vY-N4-Rui">
-                                            <rect key="frame" x="66" y="10" width="639" height="25"/>
+                                            <rect key="frame" x="66" y="8" width="494" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </slider>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="hlV-2f-kqh">
+                                        <view key="customView" contentMode="scaleToFill" id="z3V-er-8DU">
+                                            <rect key="frame" x="570" y="6" width="155" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-- / --" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNY-vL-pgO">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="gNY-vL-pgO" firstAttribute="trailing" secondItem="z3V-er-8DU" secondAttribute="trailing" type="default" id="SNn-hq-o92"/>
+                                                <constraint firstItem="gNY-vL-pgO" firstAttribute="leading" secondItem="z3V-er-8DU" secondAttribute="leading" type="default" id="Th3-ex-7EX"/>
+                                                <constraint firstItem="gNY-vL-pgO" firstAttribute="centerY" secondItem="z3V-er-8DU" secondAttribute="centerY" type="default" id="sdW-Se-kPd"/>
+                                            </constraints>
+                                        </view>
                                     </barButtonItem>
                                     <barButtonItem title="Play" style="plain" id="iyk-VC-2LE">
                                         <connections>
@@ -101,7 +121,9 @@
                     <connections>
                         <outlet property="backButton" destination="Mzj-p2-eHU" id="lVc-VL-Vrb"/>
                         <outlet property="playButton" destination="iyk-VC-2LE" id="Mha-aY-ay8"/>
+                        <outlet property="positionLabel" destination="gNY-vL-pgO" id="cNQ-bS-Hr6"/>
                         <outlet property="screenView" destination="iF4-n3-EBL" id="SVz-sD-nLr"/>
+                        <outlet property="slider" destination="4vY-N4-Rui" id="pSc-1b-u6P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKE-Gy-njF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -129,7 +151,9 @@
                 <relationship kind="action" name="togglePlay:"/>
                 <relationship kind="outlet" name="backButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="playButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="positionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="screenView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
             </relationships>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">

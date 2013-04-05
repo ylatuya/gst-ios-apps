@@ -51,6 +51,8 @@
 @synthesize backButton;
 @synthesize playButton;
 @synthesize screenView;
+@synthesize slider;
+@synthesize positionLabel;
 
 -(void) _poll_gst_bus
 {
@@ -60,7 +62,7 @@
     /* Wait until error or EOS */
     bus = gst_element_get_bus (self->pipeline);
     msg = gst_bus_timed_pop_filtered(bus, GST_CLOCK_TIME_NONE,
-                                         (GstMessageType) (GST_MESSAGE_ERROR | GST_MESSAGE_EOS));
+                                         (GstMessageType) (GST_MESSAGE_ERROR | GST_MESSAGE_EOS | GST_MESSAGE_DURATION| GST_MESSAGE_STATE_CHANGED));
     gst_object_unref(bus);
     
     switch (GST_MESSAGE_TYPE(msg)) {
@@ -85,6 +87,31 @@
             [alert show];
             //[alert release];
             
+        }
+            break;
+        case GST_MESSAGE_DURATION: {
+            GstFormat format;
+            gint64 dur;
+            
+            gst_message_parse_duration(msg, &format, &dur);
+            if (format == GST_FORMAT_TIME && GST_CLOCK_TIME_IS_VALID(dur)) {
+                self->duration = (GstClockTime) dur;
+                [self updatePositionUI];
+            } else {
+                [self queryDuration];
+            }
+        }
+            break;
+        case GST_MESSAGE_STATE_CHANGED: {
+            GstState state;
+            if (GST_MESSAGE_SRC(msg) == GST_OBJECT_CAST(self->pipeline)) {
+                gst_message_parse_state_changed(msg, NULL, &state, NULL);
+                if (state == GST_STATE_PLAYING) {
+                    [self startPositionTimer];
+                } else if (state == GST_STATE_READY) {
+                    [self stopPositionTimer];
+                }
+            }
         }
             break;
         default:
@@ -178,8 +205,86 @@
     playButton.title = @"Pause";
 }
 
--(void)setURI:(NSString*)uri {
+-(void)setURI:(NSString*)uri
+{
     g_object_set(self->pipeline, "uri", [uri UTF8String], NULL);
+}
+
+-(void)queryDuration
+{
+    gint64 dur;
+    GstFormat format = GST_FORMAT_TIME;
+    gst_element_query_duration(self->pipeline, &format, &dur);
+
+    if (format == GST_FORMAT_TIME) {
+        self->duration = (GstClockTime) dur;
+        [self updatePositionUI];
+    }
+}
+
+-(void)queryPosition:(NSTimer*) timer
+{
+    gint64 pos;
+    GstFormat format = GST_FORMAT_TIME;
+    gst_element_query_position(self->pipeline, &format, &pos);
+    
+    if (format == GST_FORMAT_TIME) {
+        self->position = (GstClockTime) pos;
+        if (!GST_CLOCK_TIME_IS_VALID(duration) || duration == 0) {
+            [self queryDuration];
+        } else {
+            [self updatePositionUI];
+        }
+    }
+}
+
+-(void)updatePositionUI
+{
+    NSString *position_txt = @" -- ";
+    NSString *duration_txt = @" -- ";
+    
+    if (GST_CLOCK_TIME_IS_VALID(self->duration)) {
+        NSUInteger hours = (self->duration / GST_SECOND) / (60 * 60);
+        NSUInteger minutes = ((self->duration / GST_SECOND) / 60) % 60;
+        NSUInteger seconds = (self->duration / GST_SECOND) % 60;
+        
+        duration_txt = [NSString stringWithFormat:@"%02u:%02u:%02u", hours, minutes, seconds, nil];
+    }
+    if (GST_CLOCK_TIME_IS_VALID(self->position)) {
+        NSUInteger hours = (self->position / GST_SECOND) / (60 * 60);
+        NSUInteger minutes = ((self->position / GST_SECOND) / 60) % 60;
+        NSUInteger seconds = (self->position / GST_SECOND) % 60;
+        
+        position_txt = [NSString stringWithFormat:@"%02u:%02u:%02u", hours, minutes, seconds, nil];
+    }
+    
+    NSString *text = [NSString stringWithFormat:@"%@ / %@",
+                      position_txt, duration_txt, nil];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.positionLabel.text = text;
+        
+        if (GST_CLOCK_TIME_IS_VALID(self->duration)) {
+            [self.slider setMaximumValue:(self->duration/GST_SECOND)];
+            if (GST_CLOCK_TIME_IS_VALID(self->position)) {
+                [self.slider setValue:(self->position/GST_SECOND)];
+            }
+        } else {
+            [self.slider setValue:0];
+        }
+    });
+}
+
+-(void)startPositionTimer
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self->positionTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(queryPosition:) userInfo:nil repeats:YES];
+    });
+}
+
+-(void)stopPositionTimer
+{
+    [self->positionTimer invalidate];
 }
 
 @end

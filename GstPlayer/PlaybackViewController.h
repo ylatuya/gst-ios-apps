@@ -48,14 +48,23 @@
     IBOutlet UIBarButtonItem *backButton;
     IBOutlet UIBarButtonItem *playButton;
     IBOutlet UIView *screenView;
+    IBOutlet UISlider *slider;
+    IBOutlet UILabel *positionLabel;
     
     GstElement *pipeline;
     GstElement *videosink;
+    
+    GstClockTime duration;
+    GstClockTime position;
+    
+    NSTimer *positionTimer;
 }
 
 @property (retain,nonatomic) UIBarButtonItem *backButton;
 @property (retain,nonatomic) UIBarButtonItem *playButton;
 @property (retain,nonatomic) UIView *screenView;
+@property (retain,nonatomic) UISlider *slider;
+@property (retain,nonatomic) UILabel *positionLabel;
 
 -(IBAction)back:(id)sender;
 -(IBAction)togglePlay:(id)sender;
@@ -64,6 +73,12 @@
 -(void)pause;
 -(void)stop;
 -(void)play;
+
+-(void)queryDuration;
+-(void)queryPosition:(NSTimer *)timer;
+-(void)updatePositionUI;
+-(void)startPositionTimer;
+-(void)stopPositionTimer;
 
 -(void)setURI:(NSString*)uri;
 
