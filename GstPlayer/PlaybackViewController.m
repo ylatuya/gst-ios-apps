@@ -287,4 +287,12 @@
     [self->positionTimer invalidate];
 }
 
+-(IBAction)sliderChange:(id)sender {
+    gint64 pos = ((gint64) [slider value]) * GST_SECOND;
+    
+    NSLog(@"Seeking to position: %llu", pos, nil);
+    
+    gst_element_seek_simple(self->pipeline, GST_FORMAT_TIME, GST_SEEK_FLAG_FLUSH, pos);
+}
+
 @end

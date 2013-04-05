@@ -68,6 +68,7 @@
 
 -(IBAction)back:(id)sender;
 -(IBAction)togglePlay:(id)sender;
+-(IBAction)sliderChange:(id)sender;
 
 -(void)initialize;
 -(void)pause;

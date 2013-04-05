@@ -72,9 +72,12 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="gsf-FS-kp3">
-                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="4vY-N4-Rui">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" continuous="NO" id="4vY-N4-Rui">
                                             <rect key="frame" x="66" y="8" width="494" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="sliderChange:" destination="bjh-aH-ldv" eventType="valueChanged" id="s8j-Vc-fIM"/>
+                                            </connections>
                                         </slider>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="hlV-2f-kqh">
@@ -148,6 +151,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PlaybackViewController.h"/>
             <relationships>
                 <relationship kind="action" name="back:"/>
+                <relationship kind="action" name="sliderChange:"/>
                 <relationship kind="action" name="togglePlay:"/>
                 <relationship kind="outlet" name="backButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="playButton" candidateClass="UIBarButtonItem"/>
