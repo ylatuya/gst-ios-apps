@@ -97,8 +97,8 @@
 		BBD8E98B170DDBFF00E98C18 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		BBD8E98D170DDC0400E98C18 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		BBD8E98F170DDC2000E98C18 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		BBD8E996170E0B0C00E98C18 /* EaglUIVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EaglUIVIew.h; path = ../EaglUIVIew.h; sourceTree = "<group>"; };
-		BBD8E997170E0B0C00E98C18 /* EaglUIVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EaglUIVIew.m; path = ../EaglUIVIew.m; sourceTree = "<group>"; };
+		BBD8E996170E0B0C00E98C18 /* EaglUIVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaglUIVIew.h; sourceTree = "<group>"; };
+		BBD8E997170E0B0C00E98C18 /* EaglUIVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaglUIVIew.m; sourceTree = "<group>"; };
 		BBD8E99B170E0C3000E98C18 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
