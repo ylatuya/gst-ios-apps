@@ -7,233 +7,134 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB17FC5C170CA6C200D1C787 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC5B170CA6C200D1C787 /* UIKit.framework */; };
-		BB17FC60170CA6C200D1C787 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC5F170CA6C200D1C787 /* CoreGraphics.framework */; };
-		BB17FC62170CA6C200D1C787 /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC61170CA6C200D1C787 /* GStreamer.framework */; };
-		BB17FC64170CA6C200D1C787 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC63170CA6C200D1C787 /* CoreAudio.framework */; };
-		BB17FC6A170CA6C200D1C787 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB17FC68170CA6C200D1C787 /* InfoPlist.strings */; };
-		BB17FC6C170CA6C200D1C787 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB17FC6B170CA6C200D1C787 /* main.m */; };
-		BB17FC70170CA6C200D1C787 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB17FC6F170CA6C200D1C787 /* AppDelegate.m */; };
-		BB17FC72170CA6C200D1C787 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BB17FC71170CA6C200D1C787 /* Default.png */; };
-		BB17FC74170CA6C200D1C787 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB17FC73170CA6C200D1C787 /* Default@2x.png */; };
-		BB17FC76170CA6C200D1C787 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB17FC75170CA6C200D1C787 /* Default-568h@2x.png */; };
-		BB17FC79170CA6C200D1C787 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB17FC77170CA6C200D1C787 /* MainStoryboard_iPhone.storyboard */; };
-		BB17FC7C170CA6C200D1C787 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB17FC7A170CA6C200D1C787 /* MainStoryboard_iPad.storyboard */; };
-		BB17FC7F170CA6C200D1C787 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB17FC7E170CA6C200D1C787 /* ViewController.m */; };
-		BB17FC81170CA6C200D1C787 /* gst_ios_backend.c in Sources */ = {isa = PBXBuildFile; fileRef = BB17FC80170CA6C200D1C787 /* gst_ios_backend.c */; };
-		BB17FC84170CA6C200D1C787 /* gst_ios_plugins.c in Sources */ = {isa = PBXBuildFile; fileRef = BB17FC83170CA6C200D1C787 /* gst_ios_plugins.c */; };
-		BB17FC8D170CA6C200D1C787 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC8C170CA6C200D1C787 /* SenTestingKit.framework */; };
-		BB17FC8E170CA6C200D1C787 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC5B170CA6C200D1C787 /* UIKit.framework */; };
-		BB17FC8F170CA6C200D1C787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC5D170CA6C200D1C787 /* Foundation.framework */; };
-		BB17FC97170CA6C200D1C787 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB17FC95170CA6C200D1C787 /* InfoPlist.strings */; };
-		BB17FC9A170CA6C200D1C787 /* GstPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB17FC99170CA6C200D1C787 /* GstPlayerTests.m */; };
-		BB17FCA4170CABF500D1C787 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FCA3170CABF500D1C787 /* MediaPlayer.framework */; };
-		BB17FCA7170CB73A00D1C787 /* MovieEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB17FCA6170CB73A00D1C787 /* MovieEntryCell.m */; };
-		BBD8E976170DAA9200E98C18 /* PlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD8E975170DAA9200E98C18 /* PlaybackViewController.m */; };
-		BBD8E97C170DCED900E98C18 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E97B170DCED900E98C18 /* libresolv.dylib */; };
-		BBD8E97E170DD4FC00E98C18 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E97D170DD4FC00E98C18 /* libstdc++.dylib */; };
-		BBD8E980170DD6B000E98C18 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E97F170DD6B000E98C18 /* OpenGLES.framework */; };
-		BBD8E982170DD6B400E98C18 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E981170DD6B400E98C18 /* AVFoundation.framework */; };
-		BBD8E98A170DDB7C00E98C18 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E989170DDB7C00E98C18 /* AudioToolbox.framework */; };
-		BBD8E98C170DDBFF00E98C18 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E98B170DDBFF00E98C18 /* CoreVideo.framework */; };
-		BBD8E98E170DDC0400E98C18 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E98D170DDC0400E98C18 /* CoreMedia.framework */; };
-		BBD8E990170DDC2000E98C18 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E98F170DDC2000E98C18 /* CoreFoundation.framework */; };
-		BBD8E991170DE0AB00E98C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB17FC5D170CA6C200D1C787 /* Foundation.framework */; };
-		BBD8E998170E0B0C00E98C18 /* EaglUIVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD8E997170E0B0C00E98C18 /* EaglUIVIew.m */; };
-		BBD8E99C170E0C3000E98C18 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD8E99B170E0C3000E98C18 /* QuartzCore.framework */; };
+		6322F33A171DA6B9003BEA22 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6322F339171DA6B9003BEA22 /* UIKit.framework */; };
+		6322F33C171DA6B9003BEA22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6322F33B171DA6B9003BEA22 /* Foundation.framework */; };
+		6322F33E171DA6B9003BEA22 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6322F33D171DA6B9003BEA22 /* CoreGraphics.framework */; };
+		6322F340171DA6B9003BEA22 /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6322F33F171DA6B9003BEA22 /* GStreamer.framework */; };
+		6322F346171DA6BA003BEA22 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6322F344171DA6BA003BEA22 /* InfoPlist.strings */; };
+		6322F348171DA6BB003BEA22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6322F347171DA6BB003BEA22 /* main.m */; };
+		6322F34E171DA6BB003BEA22 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6322F34D171DA6BB003BEA22 /* Default.png */; };
+		6322F350171DA6BB003BEA22 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6322F34F171DA6BB003BEA22 /* Default@2x.png */; };
+		6322F352171DA6BB003BEA22 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6322F351171DA6BB003BEA22 /* Default-568h@2x.png */; };
+		6322F35D171DA6BC003BEA22 /* gst_ios_backend.c in Sources */ = {isa = PBXBuildFile; fileRef = 6322F35C171DA6BC003BEA22 /* gst_ios_backend.c */; };
+		6322F360171DA6BC003BEA22 /* gst_ios_plugins.c in Sources */ = {isa = PBXBuildFile; fileRef = 6322F35F171DA6BC003BEA22 /* gst_ios_plugins.c */; };
+		6322F378171DA7AA003BEA22 /* EaglUIVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 6322F371171DA7AA003BEA22 /* EaglUIVIew.m */; };
+		6322F379171DA7AA003BEA22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6322F373171DA7AA003BEA22 /* AppDelegate.m */; };
+		6322F37A171DA7AA003BEA22 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6322F374171DA7AA003BEA22 /* MainStoryboard_iPhone.storyboard */; };
+		6322F37B171DA7AA003BEA22 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6322F375171DA7AA003BEA22 /* MainStoryboard_iPad.storyboard */; };
+		6322F37C171DA7AA003BEA22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6322F377171DA7AA003BEA22 /* ViewController.m */; };
+		6322F381171DA7B4003BEA22 /* MovieEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6322F37E171DA7B4003BEA22 /* MovieEntryCell.m */; };
+		6322F382171DA7B4003BEA22 /* PlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6322F380171DA7B4003BEA22 /* PlaybackViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		BB17FC90170CA6C200D1C787 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB17FC50170CA6C100D1C787 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB17FC57170CA6C200D1C787;
-			remoteInfo = GstPlayer;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		BB17FC58170CA6C200D1C787 /* GstPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GstPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB17FC5B170CA6C200D1C787 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		BB17FC5D170CA6C200D1C787 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		BB17FC5F170CA6C200D1C787 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BB17FC61170CA6C200D1C787 /* GStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GStreamer.framework; path = Library/Frameworks/GStreamer.framework; sourceTree = DEVELOPER_DIR; };
-		BB17FC63170CA6C200D1C787 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
-		BB17FC67170CA6C200D1C787 /* GstPlayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GstPlayer-Info.plist"; sourceTree = "<group>"; };
-		BB17FC69170CA6C200D1C787 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BB17FC6B170CA6C200D1C787 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BB17FC6D170CA6C200D1C787 /* GstPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GstPlayer-Prefix.pch"; sourceTree = "<group>"; };
-		BB17FC6E170CA6C200D1C787 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BB17FC6F170CA6C200D1C787 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BB17FC71170CA6C200D1C787 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		BB17FC73170CA6C200D1C787 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		BB17FC75170CA6C200D1C787 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BB17FC78170CA6C200D1C787 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		BB17FC7B170CA6C200D1C787 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		BB17FC7D170CA6C200D1C787 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BB17FC7E170CA6C200D1C787 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BB17FC80170CA6C200D1C787 /* gst_ios_backend.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gst_ios_backend.c; sourceTree = "<group>"; };
-		BB17FC82170CA6C200D1C787 /* gst_ios_backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gst_ios_backend.h; sourceTree = "<group>"; };
-		BB17FC83170CA6C200D1C787 /* gst_ios_plugins.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gst_ios_plugins.c; sourceTree = "<group>"; };
-		BB17FC85170CA6C200D1C787 /* gst_ios_plugins.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gst_ios_plugins.h; sourceTree = "<group>"; };
-		BB17FC8B170CA6C200D1C787 /* GstPlayerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GstPlayerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB17FC8C170CA6C200D1C787 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		BB17FC94170CA6C200D1C787 /* GstPlayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GstPlayerTests-Info.plist"; sourceTree = "<group>"; };
-		BB17FC96170CA6C200D1C787 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BB17FC98170CA6C200D1C787 /* GstPlayerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GstPlayerTests.h; sourceTree = "<group>"; };
-		BB17FC99170CA6C200D1C787 /* GstPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GstPlayerTests.m; sourceTree = "<group>"; };
-		BB17FCA3170CABF500D1C787 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		BB17FCA5170CB73A00D1C787 /* MovieEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieEntryCell.h; sourceTree = "<group>"; };
-		BB17FCA6170CB73A00D1C787 /* MovieEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieEntryCell.m; sourceTree = "<group>"; };
-		BBD8E974170DAA9200E98C18 /* PlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackViewController.h; sourceTree = "<group>"; };
-		BBD8E975170DAA9200E98C18 /* PlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackViewController.m; sourceTree = "<group>"; };
-		BBD8E97B170DCED900E98C18 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
-		BBD8E97D170DD4FC00E98C18 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
-		BBD8E97F170DD6B000E98C18 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		BBD8E981170DD6B400E98C18 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		BBD8E983170DD6C400E98C18 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
-		BBD8E989170DDB7C00E98C18 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		BBD8E98B170DDBFF00E98C18 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		BBD8E98D170DDC0400E98C18 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		BBD8E98F170DDC2000E98C18 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		BBD8E996170E0B0C00E98C18 /* EaglUIVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaglUIVIew.h; sourceTree = "<group>"; };
-		BBD8E997170E0B0C00E98C18 /* EaglUIVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaglUIVIew.m; sourceTree = "<group>"; };
-		BBD8E99B170E0C3000E98C18 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6322F336171DA6B9003BEA22 /* GstPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GstPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6322F339171DA6B9003BEA22 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6322F33B171DA6B9003BEA22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6322F33D171DA6B9003BEA22 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6322F33F171DA6B9003BEA22 /* GStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GStreamer.framework; path = Library/Frameworks/GStreamer.framework; sourceTree = DEVELOPER_DIR; };
+		6322F343171DA6BA003BEA22 /* GstPlayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GstPlayer-Info.plist"; sourceTree = "<group>"; };
+		6322F345171DA6BA003BEA22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6322F347171DA6BB003BEA22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6322F349171DA6BB003BEA22 /* GstPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GstPlayer-Prefix.pch"; sourceTree = "<group>"; };
+		6322F34D171DA6BB003BEA22 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6322F34F171DA6BB003BEA22 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6322F351171DA6BB003BEA22 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6322F35C171DA6BC003BEA22 /* gst_ios_backend.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gst_ios_backend.c; sourceTree = "<group>"; };
+		6322F35E171DA6BC003BEA22 /* gst_ios_backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gst_ios_backend.h; sourceTree = "<group>"; };
+		6322F35F171DA6BC003BEA22 /* gst_ios_plugins.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gst_ios_plugins.c; sourceTree = "<group>"; };
+		6322F361171DA6BC003BEA22 /* gst_ios_plugins.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gst_ios_plugins.h; sourceTree = "<group>"; };
+		6322F370171DA7AA003BEA22 /* EaglUIVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaglUIVIew.h; sourceTree = "<group>"; };
+		6322F371171DA7AA003BEA22 /* EaglUIVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaglUIVIew.m; sourceTree = "<group>"; };
+		6322F372171DA7AA003BEA22 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6322F373171DA7AA003BEA22 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6322F374171DA7AA003BEA22 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		6322F375171DA7AA003BEA22 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		6322F376171DA7AA003BEA22 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6322F377171DA7AA003BEA22 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6322F37D171DA7B4003BEA22 /* MovieEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieEntryCell.h; sourceTree = "<group>"; };
+		6322F37E171DA7B4003BEA22 /* MovieEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieEntryCell.m; sourceTree = "<group>"; };
+		6322F37F171DA7B4003BEA22 /* PlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackViewController.h; sourceTree = "<group>"; };
+		6322F380171DA7B4003BEA22 /* PlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BB17FC55170CA6C200D1C787 /* Frameworks */ = {
+		6322F333171DA6B8003BEA22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD8E99C170E0C3000E98C18 /* QuartzCore.framework in Frameworks */,
-				BBD8E991170DE0AB00E98C18 /* Foundation.framework in Frameworks */,
-				BBD8E990170DDC2000E98C18 /* CoreFoundation.framework in Frameworks */,
-				BBD8E98E170DDC0400E98C18 /* CoreMedia.framework in Frameworks */,
-				BBD8E98C170DDBFF00E98C18 /* CoreVideo.framework in Frameworks */,
-				BBD8E98A170DDB7C00E98C18 /* AudioToolbox.framework in Frameworks */,
-				BBD8E982170DD6B400E98C18 /* AVFoundation.framework in Frameworks */,
-				BBD8E980170DD6B000E98C18 /* OpenGLES.framework in Frameworks */,
-				BBD8E97E170DD4FC00E98C18 /* libstdc++.dylib in Frameworks */,
-				BBD8E97C170DCED900E98C18 /* libresolv.dylib in Frameworks */,
-				BB17FCA4170CABF500D1C787 /* MediaPlayer.framework in Frameworks */,
-				BB17FC5C170CA6C200D1C787 /* UIKit.framework in Frameworks */,
-				BB17FC60170CA6C200D1C787 /* CoreGraphics.framework in Frameworks */,
-				BB17FC62170CA6C200D1C787 /* GStreamer.framework in Frameworks */,
-				BB17FC64170CA6C200D1C787 /* CoreAudio.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB17FC87170CA6C200D1C787 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB17FC8D170CA6C200D1C787 /* SenTestingKit.framework in Frameworks */,
-				BB17FC8E170CA6C200D1C787 /* UIKit.framework in Frameworks */,
-				BB17FC8F170CA6C200D1C787 /* Foundation.framework in Frameworks */,
+				6322F33A171DA6B9003BEA22 /* UIKit.framework in Frameworks */,
+				6322F33C171DA6B9003BEA22 /* Foundation.framework in Frameworks */,
+				6322F33E171DA6B9003BEA22 /* CoreGraphics.framework in Frameworks */,
+				6322F340171DA6B9003BEA22 /* GStreamer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB17FC4F170CA6C100D1C787 = {
+		6322F32D171DA6B5003BEA22 = {
 			isa = PBXGroup;
 			children = (
-				BBD8E99B170E0C3000E98C18 /* QuartzCore.framework */,
-				BBD8E98F170DDC2000E98C18 /* CoreFoundation.framework */,
-				BBD8E98D170DDC0400E98C18 /* CoreMedia.framework */,
-				BBD8E98B170DDBFF00E98C18 /* CoreVideo.framework */,
-				BBD8E989170DDB7C00E98C18 /* AudioToolbox.framework */,
-				BBD8E983170DD6C400E98C18 /* CoreAudio.framework */,
-				BBD8E981170DD6B400E98C18 /* AVFoundation.framework */,
-				BBD8E97F170DD6B000E98C18 /* OpenGLES.framework */,
-				BBD8E97D170DD4FC00E98C18 /* libstdc++.dylib */,
-				BBD8E97B170DCED900E98C18 /* libresolv.dylib */,
-				BB17FC65170CA6C200D1C787 /* GstPlayer */,
-				BB17FC92170CA6C200D1C787 /* GstPlayerTests */,
-				BB17FC5A170CA6C200D1C787 /* Frameworks */,
-				BB17FC59170CA6C200D1C787 /* Products */,
+				6322F341171DA6B9003BEA22 /* GstPlayer */,
+				6322F338171DA6B9003BEA22 /* Frameworks */,
+				6322F337171DA6B9003BEA22 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BB17FC59170CA6C200D1C787 /* Products */ = {
+		6322F337171DA6B9003BEA22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB17FC58170CA6C200D1C787 /* GstPlayer.app */,
-				BB17FC8B170CA6C200D1C787 /* GstPlayerTests.octest */,
+				6322F336171DA6B9003BEA22 /* GstPlayer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB17FC5A170CA6C200D1C787 /* Frameworks */ = {
+		6322F338171DA6B9003BEA22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB17FCA3170CABF500D1C787 /* MediaPlayer.framework */,
-				BB17FC5B170CA6C200D1C787 /* UIKit.framework */,
-				BB17FC5D170CA6C200D1C787 /* Foundation.framework */,
-				BB17FC5F170CA6C200D1C787 /* CoreGraphics.framework */,
-				BB17FC61170CA6C200D1C787 /* GStreamer.framework */,
-				BB17FC63170CA6C200D1C787 /* CoreAudio.framework */,
-				BB17FC8C170CA6C200D1C787 /* SenTestingKit.framework */,
+				6322F339171DA6B9003BEA22 /* UIKit.framework */,
+				6322F33B171DA6B9003BEA22 /* Foundation.framework */,
+				6322F33D171DA6B9003BEA22 /* CoreGraphics.framework */,
+				6322F33F171DA6B9003BEA22 /* GStreamer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BB17FC65170CA6C200D1C787 /* GstPlayer */ = {
+		6322F341171DA6B9003BEA22 /* GstPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				BBD8E996170E0B0C00E98C18 /* EaglUIVIew.h */,
-				BBD8E997170E0B0C00E98C18 /* EaglUIVIew.m */,
-				BB17FC6E170CA6C200D1C787 /* AppDelegate.h */,
-				BB17FC6F170CA6C200D1C787 /* AppDelegate.m */,
-				BB17FC77170CA6C200D1C787 /* MainStoryboard_iPhone.storyboard */,
-				BB17FC7A170CA6C200D1C787 /* MainStoryboard_iPad.storyboard */,
-				BB17FC7D170CA6C200D1C787 /* ViewController.h */,
-				BB17FC7E170CA6C200D1C787 /* ViewController.m */,
-				BB17FC66170CA6C200D1C787 /* Supporting Files */,
-				BB17FCA5170CB73A00D1C787 /* MovieEntryCell.h */,
-				BB17FCA6170CB73A00D1C787 /* MovieEntryCell.m */,
-				BBD8E974170DAA9200E98C18 /* PlaybackViewController.h */,
-				BBD8E975170DAA9200E98C18 /* PlaybackViewController.m */,
+				6322F370171DA7AA003BEA22 /* EaglUIVIew.h */,
+				6322F371171DA7AA003BEA22 /* EaglUIVIew.m */,
+				6322F372171DA7AA003BEA22 /* AppDelegate.h */,
+				6322F373171DA7AA003BEA22 /* AppDelegate.m */,
+				6322F374171DA7AA003BEA22 /* MainStoryboard_iPhone.storyboard */,
+				6322F375171DA7AA003BEA22 /* MainStoryboard_iPad.storyboard */,
+				6322F376171DA7AA003BEA22 /* ViewController.h */,
+				6322F377171DA7AA003BEA22 /* ViewController.m */,
+				6322F37D171DA7B4003BEA22 /* MovieEntryCell.h */,
+				6322F37E171DA7B4003BEA22 /* MovieEntryCell.m */,
+				6322F37F171DA7B4003BEA22 /* PlaybackViewController.h */,
+				6322F380171DA7B4003BEA22 /* PlaybackViewController.m */,
+				6322F342171DA6BA003BEA22 /* Supporting Files */,
 			);
 			path = GstPlayer;
 			sourceTree = "<group>";
 		};
-		BB17FC66170CA6C200D1C787 /* Supporting Files */ = {
+		6322F342171DA6BA003BEA22 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BB17FC67170CA6C200D1C787 /* GstPlayer-Info.plist */,
-				BB17FC68170CA6C200D1C787 /* InfoPlist.strings */,
-				BB17FC6B170CA6C200D1C787 /* main.m */,
-				BB17FC6D170CA6C200D1C787 /* GstPlayer-Prefix.pch */,
-				BB17FC71170CA6C200D1C787 /* Default.png */,
-				BB17FC73170CA6C200D1C787 /* Default@2x.png */,
-				BB17FC75170CA6C200D1C787 /* Default-568h@2x.png */,
-				BB17FC80170CA6C200D1C787 /* gst_ios_backend.c */,
-				BB17FC82170CA6C200D1C787 /* gst_ios_backend.h */,
-				BB17FC83170CA6C200D1C787 /* gst_ios_plugins.c */,
-				BB17FC85170CA6C200D1C787 /* gst_ios_plugins.h */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BB17FC92170CA6C200D1C787 /* GstPlayerTests */ = {
-			isa = PBXGroup;
-			children = (
-				BB17FC98170CA6C200D1C787 /* GstPlayerTests.h */,
-				BB17FC99170CA6C200D1C787 /* GstPlayerTests.m */,
-				BB17FC93170CA6C200D1C787 /* Supporting Files */,
-			);
-			path = GstPlayerTests;
-			sourceTree = "<group>";
-		};
-		BB17FC93170CA6C200D1C787 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BB17FC94170CA6C200D1C787 /* GstPlayerTests-Info.plist */,
-				BB17FC95170CA6C200D1C787 /* InfoPlist.strings */,
+				6322F343171DA6BA003BEA22 /* GstPlayer-Info.plist */,
+				6322F344171DA6BA003BEA22 /* InfoPlist.strings */,
+				6322F347171DA6BB003BEA22 /* main.m */,
+				6322F349171DA6BB003BEA22 /* GstPlayer-Prefix.pch */,
+				6322F34D171DA6BB003BEA22 /* Default.png */,
+				6322F34F171DA6BB003BEA22 /* Default@2x.png */,
+				6322F351171DA6BB003BEA22 /* Default-568h@2x.png */,
+				6322F35C171DA6BC003BEA22 /* gst_ios_backend.c */,
+				6322F35E171DA6BC003BEA22 /* gst_ios_backend.h */,
+				6322F35F171DA6BC003BEA22 /* gst_ios_plugins.c */,
+				6322F361171DA6BC003BEA22 /* gst_ios_plugins.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -241,13 +142,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB17FC57170CA6C200D1C787 /* GstPlayer */ = {
+		6322F335171DA6B8003BEA22 /* GstPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB17FC9D170CA6C200D1C787 /* Build configuration list for PBXNativeTarget "GstPlayer" */;
+			buildConfigurationList = 6322F364171DA6BC003BEA22 /* Build configuration list for PBXNativeTarget "GstPlayer" */;
 			buildPhases = (
-				BB17FC54170CA6C200D1C787 /* Sources */,
-				BB17FC55170CA6C200D1C787 /* Frameworks */,
-				BB17FC56170CA6C200D1C787 /* Resources */,
+				6322F332171DA6B8003BEA22 /* Sources */,
+				6322F333171DA6B8003BEA22 /* Frameworks */,
+				6322F334171DA6B8003BEA22 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -255,158 +156,74 @@
 			);
 			name = GstPlayer;
 			productName = GstPlayer;
-			productReference = BB17FC58170CA6C200D1C787 /* GstPlayer.app */;
+			productReference = 6322F336171DA6B9003BEA22 /* GstPlayer.app */;
 			productType = "com.apple.product-type.application";
-		};
-		BB17FC8A170CA6C200D1C787 /* GstPlayerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB17FCA0170CA6C200D1C787 /* Build configuration list for PBXNativeTarget "GstPlayerTests" */;
-			buildPhases = (
-				BB17FC86170CA6C200D1C787 /* Sources */,
-				BB17FC87170CA6C200D1C787 /* Frameworks */,
-				BB17FC88170CA6C200D1C787 /* Resources */,
-				BB17FC89170CA6C200D1C787 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB17FC91170CA6C200D1C787 /* PBXTargetDependency */,
-			);
-			name = GstPlayerTests;
-			productName = GstPlayerTests;
-			productReference = BB17FC8B170CA6C200D1C787 /* GstPlayerTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BB17FC50170CA6C100D1C787 /* Project object */ = {
+		6322F32E171DA6B6003BEA22 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Thiago Sousa Santos";
+				ORGANIZATIONNAME = "GStreamer SDK";
 			};
-			buildConfigurationList = BB17FC53170CA6C100D1C787 /* Build configuration list for PBXProject "GstPlayer" */;
+			buildConfigurationList = 6322F331171DA6B8003BEA22 /* Build configuration list for PBXProject "GstPlayer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = BB17FC4F170CA6C100D1C787;
-			productRefGroup = BB17FC59170CA6C200D1C787 /* Products */;
+			mainGroup = 6322F32D171DA6B5003BEA22;
+			productRefGroup = 6322F337171DA6B9003BEA22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB17FC57170CA6C200D1C787 /* GstPlayer */,
-				BB17FC8A170CA6C200D1C787 /* GstPlayerTests */,
+				6322F335171DA6B8003BEA22 /* GstPlayer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BB17FC56170CA6C200D1C787 /* Resources */ = {
+		6322F334171DA6B8003BEA22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB17FC6A170CA6C200D1C787 /* InfoPlist.strings in Resources */,
-				BB17FC72170CA6C200D1C787 /* Default.png in Resources */,
-				BB17FC74170CA6C200D1C787 /* Default@2x.png in Resources */,
-				BB17FC76170CA6C200D1C787 /* Default-568h@2x.png in Resources */,
-				BB17FC79170CA6C200D1C787 /* MainStoryboard_iPhone.storyboard in Resources */,
-				BB17FC7C170CA6C200D1C787 /* MainStoryboard_iPad.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB17FC88170CA6C200D1C787 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB17FC97170CA6C200D1C787 /* InfoPlist.strings in Resources */,
+				6322F346171DA6BA003BEA22 /* InfoPlist.strings in Resources */,
+				6322F34E171DA6BB003BEA22 /* Default.png in Resources */,
+				6322F350171DA6BB003BEA22 /* Default@2x.png in Resources */,
+				6322F352171DA6BB003BEA22 /* Default-568h@2x.png in Resources */,
+				6322F37A171DA7AA003BEA22 /* MainStoryboard_iPhone.storyboard in Resources */,
+				6322F37B171DA7AA003BEA22 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BB17FC89170CA6C200D1C787 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		BB17FC54170CA6C200D1C787 /* Sources */ = {
+		6322F332171DA6B8003BEA22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB17FC6C170CA6C200D1C787 /* main.m in Sources */,
-				BB17FC70170CA6C200D1C787 /* AppDelegate.m in Sources */,
-				BB17FC7F170CA6C200D1C787 /* ViewController.m in Sources */,
-				BB17FC81170CA6C200D1C787 /* gst_ios_backend.c in Sources */,
-				BB17FC84170CA6C200D1C787 /* gst_ios_plugins.c in Sources */,
-				BB17FCA7170CB73A00D1C787 /* MovieEntryCell.m in Sources */,
-				BBD8E976170DAA9200E98C18 /* PlaybackViewController.m in Sources */,
-				BBD8E998170E0B0C00E98C18 /* EaglUIVIew.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB17FC86170CA6C200D1C787 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB17FC9A170CA6C200D1C787 /* GstPlayerTests.m in Sources */,
+				6322F348171DA6BB003BEA22 /* main.m in Sources */,
+				6322F35D171DA6BC003BEA22 /* gst_ios_backend.c in Sources */,
+				6322F360171DA6BC003BEA22 /* gst_ios_plugins.c in Sources */,
+				6322F378171DA7AA003BEA22 /* EaglUIVIew.m in Sources */,
+				6322F379171DA7AA003BEA22 /* AppDelegate.m in Sources */,
+				6322F37C171DA7AA003BEA22 /* ViewController.m in Sources */,
+				6322F381171DA7B4003BEA22 /* MovieEntryCell.m in Sources */,
+				6322F382171DA7B4003BEA22 /* PlaybackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		BB17FC91170CA6C200D1C787 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB17FC57170CA6C200D1C787 /* GstPlayer */;
-			targetProxy = BB17FC90170CA6C200D1C787 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		BB17FC68170CA6C200D1C787 /* InfoPlist.strings */ = {
+		6322F344171DA6BA003BEA22 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BB17FC69170CA6C200D1C787 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		BB17FC77170CA6C200D1C787 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB17FC78170CA6C200D1C787 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		BB17FC7A170CA6C200D1C787 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB17FC7B170CA6C200D1C787 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		BB17FC95170CA6C200D1C787 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB17FC96170CA6C200D1C787 /* en */,
+				6322F345171DA6BA003BEA22 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -414,13 +231,12 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BB17FC9B170CA6C200D1C787 /* Debug */ = {
+		6322F362171DA6BC003BEA22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -436,7 +252,6 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -447,13 +262,12 @@
 			};
 			name = Debug;
 		};
-		BB17FC9C170CA6C200D1C787 /* Release */ = {
+		6322F363171DA6BC003BEA22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -462,7 +276,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -474,10 +287,9 @@
 			};
 			name = Release;
 		};
-		BB17FC9E170CA6C200D1C787 /* Debug */ = {
+		6322F365171DA6BC003BEA22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = armv7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"~/Library/Developer/GStreamer/iPhone.sdk\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -486,16 +298,36 @@
 				GCC_PREFIX_HEADER = "GstPlayer/GstPlayer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"~/Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework/Headers\"";
 				INFOPLIST_FILE = "GstPlayer/GstPlayer-Info.plist";
-				OTHER_LDFLAGS = "\"-Wl,-iphoneos_version_min,5.2\"";
+				OTHER_LDFLAGS = (
+					"-lresolv",
+					"-lstdc++",
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					Foundation,
+					"-framework",
+					AVFoundation,
+					"-framework",
+					CoreMedia,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreAudio,
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					OpenGLES,
+					"-framework",
+					QuartzCore,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		BB17FC9F170CA6C200D1C787 /* Release */ = {
+		6322F366171DA6BC003BEA22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = armv7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"~/Library/Developer/GStreamer/iPhone.sdk\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -504,77 +336,54 @@
 				GCC_PREFIX_HEADER = "GstPlayer/GstPlayer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"~/Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework/Headers\"";
 				INFOPLIST_FILE = "GstPlayer/GstPlayer-Info.plist";
-				OTHER_LDFLAGS = "\"-Wl,-iphoneos_version_min,5.2\"";
+				OTHER_LDFLAGS = (
+					"-lresolv",
+					"-lstdc++",
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					Foundation,
+					"-framework",
+					AVFoundation,
+					"-framework",
+					CoreMedia,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreAudio,
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					OpenGLES,
+					"-framework",
+					QuartzCore,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		BB17FCA1170CA6C200D1C787 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GstPlayer.app/GstPlayer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GstPlayer/GstPlayer-Prefix.pch";
-				INFOPLIST_FILE = "GstPlayerTests/GstPlayerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		BB17FCA2170CA6C200D1C787 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GstPlayer.app/GstPlayer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GstPlayer/GstPlayer-Prefix.pch";
-				INFOPLIST_FILE = "GstPlayerTests/GstPlayerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB17FC53170CA6C100D1C787 /* Build configuration list for PBXProject "GstPlayer" */ = {
+		6322F331171DA6B8003BEA22 /* Build configuration list for PBXProject "GstPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB17FC9B170CA6C200D1C787 /* Debug */,
-				BB17FC9C170CA6C200D1C787 /* Release */,
+				6322F362171DA6BC003BEA22 /* Debug */,
+				6322F363171DA6BC003BEA22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB17FC9D170CA6C200D1C787 /* Build configuration list for PBXNativeTarget "GstPlayer" */ = {
+		6322F364171DA6BC003BEA22 /* Build configuration list for PBXNativeTarget "GstPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB17FC9E170CA6C200D1C787 /* Debug */,
-				BB17FC9F170CA6C200D1C787 /* Release */,
+				6322F365171DA6BC003BEA22 /* Debug */,
+				6322F366171DA6BC003BEA22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB17FCA0170CA6C200D1C787 /* Build configuration list for PBXNativeTarget "GstPlayerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB17FCA1170CA6C200D1C787 /* Debug */,
-				BB17FCA2170CA6C200D1C787 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BB17FC50170CA6C100D1C787 /* Project object */;
+	rootObject = 6322F32E171DA6B6003BEA22 /* Project object */;
 }
