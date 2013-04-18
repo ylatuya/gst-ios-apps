@@ -47,6 +47,7 @@
 @interface ViewController : UIViewController <UICollectionViewDataSource> {
     IBOutlet UICollectionView *collectionView;
     NSArray *mediaEntries;
+    NSArray *onlineEntries;
 }
 
 @property (retain,nonatomic) UICollectionView *collectionView;

@@ -84,7 +84,10 @@
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
-            [alert show];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [alert show];
+            });
+            
             //[alert release];
             
         }
@@ -170,6 +173,7 @@
 }
 
 -(IBAction)back:(id)sender {
+    gst_element_set_state(self->pipeline, GST_STATE_NULL);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

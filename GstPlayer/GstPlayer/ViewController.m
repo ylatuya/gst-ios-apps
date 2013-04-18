@@ -76,23 +76,35 @@
         [entries addObjectsFromArray:[[NSBundle mainBundle] pathsForResourcesOfType:t inDirectory:@"."]];
     }
     self->mediaEntries = entries;
+    self->onlineEntries = [NSArray arrayWithObjects:@"http://docs.gstreamer.com/media/sintel_trailer-368p.ogv",
+                           @"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_640x360.m4v", nil];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (section == 0) {
-        return [self->mediaEntries count];
+    switch (section) {
+        case 0:
+            return [self->mediaEntries count];
+        case 1:
+            return [self->onlineEntries count];
+        default:
+            return 0;
     }
-    return 0;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MovieEntryCell* newCell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"cell"
                                                                            forIndexPath:indexPath];
-    newCell.label.text = [self->mediaEntries objectAtIndex:indexPath.item];
+    
+    if(indexPath.section == 0) {
+        newCell.label.text = [NSString stringWithFormat:@"file://%@",
+                              [self->mediaEntries objectAtIndex:indexPath.item], nil];
+    } else if (indexPath.section == 1) {
+        newCell.label.text = [self->onlineEntries objectAtIndex:indexPath.item];
+    }
 
     return newCell;
 }
@@ -102,7 +114,7 @@
     if ([[segue identifier] isEqualToString:@"doPlay"]) {
         MovieEntryCell *cell = sender;
         PlaybackViewController *vc = [segue destinationViewController];
-        NSString *uri = [NSString stringWithFormat:@"file://%@", cell.label.text, nil];
+        NSString *uri = cell.label.text;
         
         [vc initialize];
         [vc setURI:uri];
