@@ -130,6 +130,9 @@
 
         g_object_set(self->pipeline, "video-sink", self->videosink, NULL);
         
+        self->position = GST_CLOCK_TIME_NONE;
+        self->duration = GST_CLOCK_TIME_NONE;
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             while (1) {
                 GST_ERROR ("Starting loop!");
@@ -216,28 +219,28 @@
 
 -(void)queryDuration
 {
-    gint64 dur;
+    gint64 dur = GST_CLOCK_TIME_NONE;
     GstFormat format = GST_FORMAT_TIME;
-    gst_element_query_duration(self->pipeline, &format, &dur);
-
-    if (format == GST_FORMAT_TIME) {
-        self->duration = (GstClockTime) dur;
-        [self updatePositionUI];
+    if (gst_element_query_duration(self->pipeline, &format, &dur)) {
+        if (format == GST_FORMAT_TIME) {
+            self->duration = (GstClockTime) dur;
+            [self updatePositionUI];
+        }
     }
 }
 
 -(void)queryPosition:(NSTimer*) timer
 {
-    gint64 pos;
+    gint64 pos = GST_CLOCK_TIME_NONE;
     GstFormat format = GST_FORMAT_TIME;
-    gst_element_query_position(self->pipeline, &format, &pos);
-    
-    if (format == GST_FORMAT_TIME) {
-        self->position = (GstClockTime) pos;
-        if (!GST_CLOCK_TIME_IS_VALID(duration) || duration == 0) {
-            [self queryDuration];
-        } else {
-            [self updatePositionUI];
+    if (gst_element_query_position(self->pipeline, &format, &pos)) {
+        if (format == GST_FORMAT_TIME) {
+            self->position = (GstClockTime) pos;
+            if (!GST_CLOCK_TIME_IS_VALID(duration) || duration == 0) {
+                [self queryDuration];
+            } else {
+                [self updatePositionUI];
+            }
         }
     }
 }
