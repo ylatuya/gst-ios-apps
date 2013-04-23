@@ -68,7 +68,8 @@
 }
 
 - (void)refreshMediaItems {
-    NSArray *ftypes = [NSArray arrayWithObjects:@"mov", @"m4v", @"m4a", @"mp4", nil];
+    NSArray *ftypes = [NSArray arrayWithObjects:@"mov", @"m4v", @"m4a", @"mp4", @"ogv",
+                       @"mp3", @"avi", @"wmv", @"mkv", @"ts", nil];
     
     NSMutableArray *entries = [[NSMutableArray alloc] init];
     
