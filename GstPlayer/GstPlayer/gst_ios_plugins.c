@@ -108,6 +108,9 @@ GST_PLUGIN_STATIC_DECLARE(mpegaudioparse);
 #if defined(GST_IOS_PLUGIN_REALMEDIA) || defined(GST_IOS_PLUGINS_CODECS_RESTRICTED)
 GST_PLUGIN_STATIC_DECLARE(realmedia);
 #endif
+#if defined(GST_IOS_PLUGIN_X264) || defined(GST_IOS_PLUGINS_CODECS_RESTRICTED)
+GST_PLUGIN_STATIC_DECLARE(x264);
+#endif
 #if defined(GST_IOS_PLUGIN_FFMPEG) || defined(GST_IOS_PLUGINS_CODECS_RESTRICTED)
 GST_PLUGIN_STATIC_DECLARE(ffmpeg);
 #endif
@@ -131,6 +134,9 @@ GST_PLUGIN_STATIC_DECLARE(mms);
 #endif
 #if defined(GST_IOS_PLUGIN_OSXAUDIO) || defined(GST_IOS_PLUGINS_SYS)
 GST_PLUGIN_STATIC_DECLARE(osxaudio);
+#endif
+#if defined(GST_IOS_PLUGIN_EGLGLESSINK) || defined(GST_IOS_PLUGINS_SYS)
+GST_PLUGIN_STATIC_DECLARE(eglglessink);
 #endif
 #if defined(GST_IOS_PLUGIN_APPLEMEDIA_NONPUBLIC) || defined(GST_IOS_PLUGINS_SYS)
 GST_PLUGIN_STATIC_DECLARE(applemedia_nonpublic);
@@ -598,6 +604,9 @@ gst_backend_register_plugins (void)
 #if defined(GST_IOS_PLUGIN_REALMEDIA) || defined(GST_IOS_PLUGINS_CODECS_RESTRICTED)
     GST_PLUGIN_STATIC_REGISTER(realmedia);
 #endif
+#if defined(GST_IOS_PLUGIN_X264) || defined(GST_IOS_PLUGINS_CODECS_RESTRICTED)
+    GST_PLUGIN_STATIC_REGISTER(x264);
+#endif
 #if defined(GST_IOS_PLUGIN_FFMPEG) || defined(GST_IOS_PLUGINS_CODECS_RESTRICTED)
     GST_PLUGIN_STATIC_REGISTER(ffmpeg);
 #endif
@@ -621,6 +630,9 @@ gst_backend_register_plugins (void)
 #endif
 #if defined(GST_IOS_PLUGIN_OSXAUDIO) || defined(GST_IOS_PLUGINS_SYS)
     GST_PLUGIN_STATIC_REGISTER(osxaudio);
+#endif
+#if defined(GST_IOS_PLUGIN_EGLGLESSINK) || defined(GST_IOS_PLUGINS_SYS)
+    GST_PLUGIN_STATIC_REGISTER(eglglessink);
 #endif
 #if defined(GST_IOS_PLUGIN_APPLEMEDIA_NONPUBLIC) || defined(GST_IOS_PLUGINS_SYS)
     GST_PLUGIN_STATIC_REGISTER(applemedia_nonpublic);
